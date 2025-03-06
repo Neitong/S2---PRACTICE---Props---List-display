@@ -1,3 +1,4 @@
+import React from "react";
 import Place from "./components/Place.jsx";
 import { AVAILABLE_PLACES } from "./data.js";
 
@@ -11,7 +12,9 @@ function App() {
       <main>
         <section className="places-category">
           <ul className="places">
-            {/* For each place from AVAILABLE_PLACES, create a Place component */}
+          {AVAILABLE_PLACES.map((place, index) => (
+              <Place key={index} place={place} />
+            ))}
           </ul>
         </section>
       </main>
