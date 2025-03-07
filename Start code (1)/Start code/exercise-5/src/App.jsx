@@ -1,5 +1,5 @@
 import React from "react";
-import { data } from "./data.js";
+import { Cards } from "./data.js";
 import Card from "./Card.jsx";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       </header>
       <main>
         <section className="cards-grid">
-          {data.map((card) => (
+          {Cards.map((card) => (
             <Card key={card.id} card={card} />
           ))}
         </section>
